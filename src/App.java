@@ -1,7 +1,3 @@
-import models.League;
-import models.Team;
-import models.Player;
-import controllers.LeagueController;
 
 public class App {
 
@@ -155,8 +151,7 @@ public class App {
         }
 
         public static void main(String[] args) {
-                League[] leagues = getLeagues();
-                LeagueController controller = new LeagueController();
+
                 System.out.println(
                                 "Bienvenido al sistema de ligas de futbol. Por favor configure su fila en student.env y ejecute los tests automaticos para validar su implementacion.");
                 // TODO: Imprimir listado original

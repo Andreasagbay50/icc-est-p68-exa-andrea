@@ -3,60 +3,40 @@ package controllers;
 import models.League;
 
 public class LeagueController {
-
-    /**
-     * FILA A - Implementar este metodo con Selection Sort ascendente.
-     * Ordena el arreglo de ligas de menor a mayor segun getTotalActiveGoals().
-     *
-     * Nombre exacto requerido: sortSelectionAsc
-     *
-     * @param leagues Arreglo de ligas a ordenar
-     * @return Arreglo ordenado
-     */
     public League[] sortSelectionAsc(League[] leagues) {
-        // TODO: Implementar (solo si su fila es A)
-        throw new UnsupportedOperationException("Metodo sortSelectionAsc no implementado");
-    }
+        int n = leagues.length;
+        for(int i=0 ; i < n ; i ++){
+            int nunmenor = i ;
+            for( int j = 0 ; j < n ; j ++){
+                if (leagues[j].getTotalActiveGoals()<leagues[nunmenor].getTotalActiveGoals()){
+                    nunmenor = j ;
+                }
+            }
+            League m = leagues[i];
+            leagues[i] = leagues[nunmenor];
+            leagues[nunmenor] = m ; 
 
-    /**
-     * FILA B - Implementar este metodo con Insertion Sort descendente.
-     * Ordena el arreglo de ligas de mayor a menor segun getTotalActiveGoals().
-     *
-     * Nombre exacto requerido: sortInsertionDesc
-     *
-     * @param leagues Arreglo de ligas a ordenar
-     * @return Arreglo ordenado
-     */
-    public League[] sortInsertionDesc(League[] leagues) {
-        // TODO: Implementar (solo si su fila es B)
-        throw new UnsupportedOperationException("Metodo sortInsertionDesc no implementado");
-    }
-
-    /**
-     * TODOS - Implementar busqueda binaria por goles activos totales.
-     *
-     * El arreglo recibido ya fue ordenado con el metodo de su fila.
-     * Implemente la busqueda conforme al orden que aplico:
-     * - Fila A: arreglo ascendente, use logica de busqueda ascendente.
-     * - Fila B: arreglo descendente, use logica de busqueda descendente.
-     *
-     * Nombre exacto requerido: binarySearchByTotalActiveGoals
-     *
-     * @param leagues          Arreglo de ligas ya ordenado
-     * @param totalActiveGoals Total de goles activos a buscar
-     * @return La liga encontrada, o null si no existe
-     */
-    public League binarySearchByTotalActiveGoals(League[] leagues, int totalActiveGoals) {
-        // TODO: Implementar
-        throw new UnsupportedOperationException("Metodo binarySearchByTotalActiveGoals no implementado");
-    }
-
-    /**
-     * Imprime el arreglo de ligas en consola.
-     *
-     * @param leagues Arreglo de ligas a imprimir
-     */
-    public void printLeagues(League[] leagues) {
+        }
+        return leagues;
 
     }
-}
+    public League[] binarySearchByTotalActiveGoals(League[] leagues) {
+        sortSelectionAsc(leagues);
+        int bajo = 0 ;
+        int alto = leagues.length -1 ; 
+        while (bajo <= alto ){
+            int centro = (bajo + alto ) /2;
+            int valorcentro = leagues(centro).getGoals();
+            if(valorcentro == )
+
+
+        }
+        
+        
+
+        
+        
+    
+    }
+    }
+

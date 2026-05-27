@@ -1,6 +1,7 @@
 
 public class App {
 
+        League league[]  getLeagues() { 
         /**
          * Retorna el arreglo completo de ligas con sus equipos y jugadores.
          * Este metodo provee los datos utilizados por los tests automaticos.
